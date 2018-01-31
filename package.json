@@ -1,0 +1,32 @@
+{
+  "name": "my-financesjs-backend",
+  "version": "1.0.0",
+  "description": "Backend my-financesjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "nodejs"
+  ],
+  "author": "Robert Luiz <robert.likejs@gmail.com> (https://rmawebworks.com.br/)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-query-int": "^2.0.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^5.0.2",
+    "mongoose-paginate": "^5.0.3",
+    "node-restful": "^0.2.6",
+    "pm2": "^2.9.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.15.0-rc.3",
+    "nodemon": "^1.14.11"
+  }
+}
