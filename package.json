@@ -4,7 +4,18 @@
   "description": "Backend my-financesjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":"nodemon",
+    "production":"pm2 start src/loader.js --name my-financesjs-backend",
+    "lint": "./node_modules/.bin/eslint src/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertluiz/my-financesjs-backend.git"
   },
   "keywords": [
     "js",
