@@ -2,11 +2,12 @@
   "name": "my-financesjs-backend",
   "version": "1.0.0",
   "description": "Backend my-financesjs",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev":"nodemon",
-    "production":"pm2 start src/loader.js --name my-financesjs-backend",
-    "lint": "./node_modules/.bin/eslint src/*.js"
+    "dev": "nodemon",
+    "production": "pm2 start src/loader.js --name my-financesjs-backend",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "devlint": "npm run lint && npm run dev"
   },
   "husky": {
     "hooks": {
@@ -24,7 +25,9 @@
   "author": "Robert Luiz <robert.likejs@gmail.com> (https://rmawebworks.com.br/)",
   "license": "MIT",
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "express-query-int": "^2.0.0",
     "lodash": "^4.17.4",
