@@ -1,7 +1,7 @@
-const restful = require('node-restful');
-const constants = require('config/constants');
+import restful from 'node-restful';
+import constants from '../../../config/constants';
 
-module.exports = new restful.mongoose.Schema({
+const debtSchema = new restful.mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -18,3 +18,5 @@ module.exports = new restful.mongoose.Schema({
     enum: constants.ENUM_PAYMENT,
   },
 });
+
+export default debtSchema;

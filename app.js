@@ -1,8 +1,8 @@
-require('app-module-path')
-  .addPath(`${__dirname}/src`);
-require('dotenv')
-  .config();
-const server = require('config/server');
-require('config/database');
-require('config/routes')(server);
+import dotenv from 'dotenv';
+import server from './src/config/server';
+import './src/config/database';
+import routes from './src/config/routes';
+
+dotenv.config();
+routes(server);
 

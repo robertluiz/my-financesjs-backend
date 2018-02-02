@@ -1,7 +1,7 @@
-const express = require('express');
-const BillingCycle = require('../api/billingCycle/bilingCycleService');
+import express from 'express';
+import BillingCycle from '../api/billingCycle/bilingCycleService';
 
-module.exports = function routerdifine(server) {
+const routes = function routerdifine(server) {
   // Set base URL for all routes
   const router = express.Router();
   server.use('/api', router);
@@ -9,3 +9,5 @@ module.exports = function routerdifine(server) {
   // Payment Cycle Routes
   BillingCycle.register(router, '/billingCycles');
 };
+
+export default routes;

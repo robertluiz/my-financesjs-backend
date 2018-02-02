@@ -1,5 +1,8 @@
-const bodyParser = require('body-parser');
-const express = require('express');
+import bodyParser from 'body-parser';
+import express from 'express';
+import logplease from 'logplease';
+
+const logger = logplease.create('my-financesjs-backend');
 
 const server = express();
 const port = 3003;
@@ -7,7 +10,7 @@ const port = 3003;
 server.use(bodyParser.urlencoded({ extended: true }));
 
 server.listen(port, () => {
-  console.log(`Backend is running on port ${port}.`);
+  logger.info(`Backend is running on port ${port}.`);
 });
 
-module.exports = server;
+export default server;

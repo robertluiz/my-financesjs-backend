@@ -1,8 +1,8 @@
-const restful = require('node-restful');
-const creditSchema = require('./creditSchema');
-const debtSchema = require('./debtSchema');
+import restful from 'node-restful';
+import creditSchema from './creditSchema';
+import debtSchema from './debtSchema';
 
-module.exports = new restful.mongoose.Schema({
+const billingCycleSchema = new restful.mongoose.Schema({
   name: { type: String, required: true },
   month: {
     type: Number, min: 1, max: 12, required: true,
@@ -13,3 +13,5 @@ module.exports = new restful.mongoose.Schema({
   credits: [creditSchema],
   debts: [debtSchema],
 });
+
+export default billingCycleSchema;

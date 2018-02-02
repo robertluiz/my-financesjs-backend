@@ -1,4 +1,6 @@
-const restful = require('node-restful');
-const billingCycleSChema = require('./Schemas/billingCycleSchema');
+import restful from 'node-restful';
+import billingCycleSChema from './Schemas/billingCycleSchema';
 
-module.exports = restful.model('BillingCycle', billingCycleSChema);
+const billingCylce = restful.model('BillingCycle', billingCycleSChema);
+
+export default billingCylce;

@@ -1,6 +1,8 @@
-const restful = require('node-restful');
+import restful from 'node-restful';
 
-module.exports = new restful.mongoose.Schema({
+const creditSchema = new restful.mongoose.Schema({
   name: { type: String, required: true },
   value: { type: Number, min: 0, required: true },
 });
+
+export default creditSchema;
