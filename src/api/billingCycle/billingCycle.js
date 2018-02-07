@@ -1,6 +1,6 @@
 import restful from 'node-restful';
 import billingCycleSChema from './Schemas/billingCycleSchema';
 
-const billingCylce = restful.model('BillingCycle', billingCycleSChema);
+const billingCycle = restful.model('BillingCycle', billingCycleSChema);
 
-export default billingCylce;
+export default billingCycle;
